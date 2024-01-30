@@ -1,0 +1,241 @@
+@use "../../assets/varibles/variables.scss" as *;
+@use "../../assets/mixins/mixins.scss" as *;
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app {
+  background: linear-gradient(to bottom right, $blue, $violet-1, $violet-2);
+  max-width: 600px;
+  border-radius: 20px;
+}
+
+.container {
+  padding: 0 20px;
+
+  @include respond-to("small") {
+    padding: 0 40px;
+  }
+}
+
+.header {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+
+  @include respond-to("small") {
+    padding: 40px 0;
+  }
+}
+
+.input {
+  width: 100%;
+  font-size: 22px;
+  color: $grey;
+  padding-left: 30px;
+  text-overflow: ellipsis;
+  border: none {
+    radius: 30px;
+  }
+
+  &:focus {
+    outline: 1px solid $grey;
+  }
+
+  &::placeholder {
+    opacity: 50%;
+  }
+
+  @include respond-to("small") {
+    font-size: 32px;
+  }
+}
+
+.searchButton {
+  cursor: pointer;
+  background-color: $white;
+  border: none {
+    radius: 50%;
+  }
+
+  &:focus {
+    outline: 1px solid $grey;
+  }
+}
+
+.search {
+  height: 50%;
+  background-color: $white;
+}
+
+.main {
+  padding-bottom: 20px;
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+
+  @include respond-to("small") {
+    padding-bottom: 40px;
+    gap: 40px;
+  }
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.weather {
+  /* empty class for identification in code */
+}
+
+.weatherImage {
+  width: 75%;
+  height: 75%;
+
+  @include respond-to("small") {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.weatherCondition {
+  font-size: 25px;
+
+  @include respond-to("small") {
+    font-size: 50px;
+  }
+}
+
+.temperature {
+  font-size: 50px;
+  line-height: 40px;
+
+  @include respond-to("small") {
+    font-size: 100px;
+    line-height: 80px;
+  }
+}
+
+.city {
+  font-size: 30px;
+  line-height: 30px;
+
+  @include respond-to("small") {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.additional {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+
+  @include respond-to("small") {
+    flex-direction: row;
+  }
+}
+
+.additionalContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  &:last-child {
+    margin-left: 14px;
+  }
+
+  @include respond-to("small") {
+    justify-content: space-around;
+  }
+}
+
+.humidityImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.humidityImage {
+  width: 50%;
+  height: 50%;
+
+  @include respond-to("small") {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.additionalInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include respond-to("small") {
+    gap: 20px;
+  }
+}
+
+.additionalText {
+  font-size: 16px;
+
+  @include respond-to("small") {
+    font-size: 20px;
+  }
+}
+
+.humidityPercent {
+  font-size: 16px;
+
+  @include respond-to("small") {
+    font-size: 20px;
+  }
+}
+
+.windImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.windImage {
+  width: 50%;
+  height: 50%;
+
+  @include respond-to("small") {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.windSpeed {
+  font-size: 16px;
+
+  @include respond-to("small") {
+    font-size: 20px;
+  }
+}
+
+.error {
+  font-size: 20px;
+  display: none;
+  padding-bottom: 20px;
+  margin-left: 24px;
+
+  @include respond-to("small") {
+    font-size: 40px;
+    padding-bottom: 40px;
+  }
+}

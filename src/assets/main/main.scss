@@ -1,0 +1,10 @@
+@forward "../normalize/normalize.scss";
+@forward "../fonts/fonts.scss";
+@use "../varibles/variables.scss" as *;
+
+html,
+body {
+  font-family: "roboto", sans-serif;
+  color: $white;
+  background-color: $black;
+}
